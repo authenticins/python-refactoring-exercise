@@ -1,12 +1,11 @@
-## Requirements 
-
 Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime location in a
 prominent city ran by a friendly innkeeper named Allison. We also buy and sell only the finest goods.
 Unfortunately, our goods are constantly degrading in `Quality` as they approach their sell by date.
 
 We have a system in place that updates our inventory for us. It was developed by a no-nonsense type named
-Leeroy, who has moved on to new adventures. Your task is to add the new feature to our system so that
-we can begin selling a new category of items. First an introduction to our system:
+Leeroy. Leeroy has moved on to new adventures, but made sure to build solid unit tests to describe the functionality of the system.
+
+First an introduction to our system:
 
 - All `items` have a `SellIn` value which denotes the number of days we have to sell the `items`
 - All `items` have a `Quality` value which denotes how valuable the item is
@@ -27,47 +26,24 @@ We have recently signed a supplier of conjured items. This requires an update to
 
 - __"Conjured"__ items degrade in `Quality` twice as fast as normal items
 
-Feel free to make any changes to the `UpdateQuality` method and add any new code as long as everything
-still works correctly. However, do not alter the `Item` class or `Items` property as those belong to the
-goblin in the corner who will insta-rage and one-shot you as he doesn't believe in shared code
-ownership (you can make the `UpdateQuality` method and `Items` property static if you like, we'll cover
-for you).
-
 Just for clarification, an item can never have its `Quality` increase above `50`, however __"Sulfuras"__ is a
 legendary item and as such its `Quality` is `80` and it never alters.
+
+Your task is to:
+
+1. Clean up the code in `guilded_rose.py` so that it is easy to read for any new engineers that are onboarded to the company without altering the `Item` class or `Items` property.  
+2. Add the new feature to our system so that we can begin selling a new category of items.
 
 Suggestion: create a python virtual environment for this project. See the [documentation](https://docs.python.org/3/library/venv.html)
 
 ## Run the unit tests from the Command-Line
 
+The test cases above are already setup in the unit tests, so you can be sure that the functionality has changed as long
+as the unit tests pass.
+
 ```
 python -m unittest
 ```
 
-## Run the TextTest fixture from the Command-Line
 
-For e.g. 10 days:
-
-```
-python texttest_fixture.py 10
-```
-
-You should make sure the command shown above works when you execute it in a terminal before trying to use TextTest (see below).
-
-
-## Run the TextTest approval test that comes with this project
-
-There are instructions in the [TextTest Readme](../texttests/README.md) for setting up TextTest. You will need to specify the Python executable and interpreter in [config.gr](../texttests/config.gr). Uncomment these lines:
-
-    executable:${TEXTTEST_HOME}/python/texttest_fixture.py
-    interpreter:python
-
-## Run the ApprovalTests.Python test
-
-This test uses the framework [ApprovalTests.Python](https://github.com/approvals/ApprovalTests.Python). You will need to install  Run it like this:
-
-```
-python tests/test_gilded_rose_approvals.py
-```
-
-You will need to approve the output file which appears under "approved_files" by renaming it from xxx.received.txt to xxx.approved.txt.
+This exercise was forked from [Guilded Rose Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata).
