@@ -27,12 +27,7 @@ Pretty simple, right? Well this is where it gets interesting:
 Just for clarification, an item can never have its `Quality` increase above `50`, however __"Sulfuras"__ is a
 legendary item and as such its `Quality` is `80` and it never alters.
 
-Your task is to:
-
-1. Clean up the code in `guilded_rose.py` so that it is easy to read for any new engineers that are onboarded to the company without altering the `Item` class or `Items` property.  
-2. Add the new feature to our system so that we can begin selling a new category of items.
-
-Suggestion: create a python virtual environment for this project. See the [documentation](https://docs.python.org/3/library/venv.html)
+Your task is to clean up the code in `guilded_rose.py` so that it is easy to read for any new engineers that are onboarded to the company without altering the `Item` class or `Items` property.  
 
 ## Run the unit tests from the Command-Line
 
