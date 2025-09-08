@@ -24,10 +24,6 @@ Pretty simple, right? Well this is where it gets interesting:
 	- `Quality` increases by `2` when there are `10` days or less and by `3` when there are `5` days or less but
 	- `Quality` drops to `0` after the concert
 
-We have recently signed a supplier of conjured items. This requires an update to our system:
-
-- __"Conjured"__ items degrade in `Quality` twice as fast as normal items
-
 Just for clarification, an item can never have its `Quality` increase above `50`, however __"Sulfuras"__ is a
 legendary item and as such its `Quality` is `80` and it never alters.
 
